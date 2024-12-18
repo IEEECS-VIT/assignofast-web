@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { Abyssinica_SIL, Alexandria } from "next/font/google";
-import Link from "next/link";
+
 
 const abyssinica = Abyssinica_SIL({
   weight: "400",
@@ -41,14 +41,14 @@ const featuresData = [
 
 export default function Features() {
   return (
-    <div className="bg-black h-[100%] p-4 font-sans">
+    <div className="bg-black h-[100%] p-4 font-sans pt-[10vh] lg:pt-[20vh]" id="features">
       <div className="flex flex-col md:flex-row">
         <div className="flex justify-center items-center w-full md:w-1/2 mb-8 md:mb-0">
           <div className="relative w-full max-w-[300px] md:max-w-none">
             <img
               src="./phone.svg"
               alt="phone img"
-              className="w-full h-auto object-contain"
+              className="w-full h-[50vh] lg:h-[70vh] object-contain"
             />
           </div>
         </div>
@@ -72,17 +72,6 @@ export default function Features() {
             ))}
           </div>
         </div>
-      </div>
-
-      <div className="flex items-center justify-center w-full lg:mt-[5vh]">
-        <button className="bg-[#465254] w-[36vw] lg:w-[20vw] h-[9vh] rounded-full border-4 border-[#6da154] flex items-center justify-center">
-          <Link
-            href="/guide"
-            className="bg-[#070707] w-[33vw] lg:w-[18vw] h-[6vh] rounded-full font-bold border-2 border-[#6da154] flex items-center justify-center"
-          >
-            USER GUIDE
-          </Link>
-        </button>
       </div>
     </div>
   );

@@ -5,15 +5,10 @@ const abyssinica = Abyssinica_SIL({
   subsets: ["latin"],
 });
 
-const alexandria = Alexandria({
-  weight: "400",
-  subsets: ["latin"],
-});
-
 export default function Question({ bgColor, question, answer }) {
   return (
     <div
-      className={`relative w-full md:w-[42rem] m-4 p-6 rounded-xl shadow-lg ${abyssinica.className}`}
+      className={`relative  md:w-[42rem] m-4 p-6 rounded-xl shadow-lg ${abyssinica.className}`}
       style={{ minHeight: "fit-content" }}
     >
       <div
@@ -22,7 +17,7 @@ export default function Question({ bgColor, question, answer }) {
       />
       <div className="relative text-white z-10 space-y-4">
         <h2
-          className={`text-xl md:text-2xl font-semibold leading-relaxed ${alexandria.className}`}
+          className={`text-xl md:text-2xl font-semibold leading-relaxed`}
         >
           {question}
         </h2>
